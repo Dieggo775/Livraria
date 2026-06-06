@@ -12,3 +12,22 @@
 *
 * Fastfy: npm install fastify --save (OPCIONAL)
 */
+
+// Import das bibliotecas
+const express = require('express');
+
+//Cria a aplicação Express
+const app = express();
+
+//Define uma porta para o servidor
+const PORT = 8080;
+
+//Cria uma rota de teste para verificar se a API está funcionando
+app.get('/', (req, res) => {
+    res.send('API funcionando!');
+});
+
+//Inicia o servidor
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+});
