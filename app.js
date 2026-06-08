@@ -70,11 +70,23 @@ app.get('/v1/livraria/livro', cors(), async function (request, response){
     response.json(dadosLivros);
 });
 
+//Retornando livros filtrando por dados
+app.get('/v1/livraria/livro/filtro', cors(), async function(request, response) {
+    let nomeLivro = request.query.nome
+    let isbnLivro = request.query.isbn
+    let autorLivro = request.query.autor
+
+    console.log('O nome do Livro é: ' + nomeLivro)
+    console.log('O isbn do Livro é: ' + isbnLivro)
+    console.log('O autor do Livro é: ' + autorLivro)
+});
+
 app.get('/v1/livraria/livro/:id', cors(), async function(request, response){
     let idLivro = request.params.id;
 
     console.log('o ID do livro é ' + idLivro);
 });
+
 
 //EndPoint recebe os dados do body da requisição e cadastrar um novo livro
 //app.post('/v1/livraria/livro', cors(), async function (resquest, response){
