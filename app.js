@@ -36,6 +36,7 @@ app.use((request, response, next) => {
 });
 
 //EndPoints da API para receber os dados do body da requisição
+//Retorna os dados dos livros cadastrados na livraria
 app.get('/v1/livraria/livro', cors(), async function (request, response){ 
     let dadosLivros = {livros: 
         [
@@ -43,25 +44,42 @@ app.get('/v1/livraria/livro', cors(), async function (request, response){
                 id: 1,
                 title: "O Senhor dos Anéis",
                 autor: "J.R.R. Tolkien",
-                Valor: "50"
+                price: "50.00"
             },
             {
                 id: 2,
                 title: "Game of Thrones",
                 autor: "George R.R. Martin",
-                Valor: "50"
+                price: "50.00"
             },
             {
                 id: 3,
                 title: "Millenium",
                 autor: "Stieg Larsson",
-                Valor: "50"
+                price: "50.00"
+            },
+            {
+                id: 4,
+                title: "Harry Potter",
+                autor: "J.K. Rowling",
+                price: "50.00"
             }
         ]
     }
     response.status(200);
     response.json(dadosLivros);
 });
+
+app.get('/v1/livraria/livro/:id', cors(), async function(request, response){
+    let idLivro = request.params.id;
+
+    console.log('o ID do livro é ' + idLivro);
+});
+
+//EndPoint recebe os dados do body da requisição e cadastrar um novo livro
+//app.post('/v1/livraria/livro', cors(), async function (resquest, response){
+  
+//});
 
 app.use(bodyParser.json());
 
