@@ -84,7 +84,7 @@ app.get('/v1/livraria/livro/filtro', cors(), async function(request, response) {
 app.get('/v1/livraria/livro/:id', cors(), async function(request, response){
     let idLivro = request.params.id;
 
-    console.log('o ID do livro é ' + idLivro);
+    console.log('o ID do livro é: ' + idLivro);
 });
 
 
