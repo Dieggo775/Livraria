@@ -42,34 +42,35 @@ app.use((request, response, next) => {
 //EndPoints da API para receber os dados do body da requisição
 //Retorna os dados dos livros cadastrados na livraria
 app.get('/v1/livraria/livro', cors(), async function (request, response){ 
-    let dadosLivros = {livros: 
-        [
-            {
-                id: 1,
-                title: "O Senhor dos Anéis",
-                autor: "J.R.R. Tolkien",
-                price: "50.00"
-            },
-            {
-                id: 2,
-                title: "Game of Thrones",
-                autor: "George R.R. Martin",
-                price: "50.00"
-            },
-            {
-                id: 3,
-                title: "Millenium",
-                autor: "Stieg Larsson",
-                price: "50.00"
-            },
-            {
-                id: 4,
-                title: "Harry Potter",
-                autor: "J.K. Rowling",
-                price: "50.00"
-            }
-        ]
-    }
+    // let dadosLivros = {livros: 
+    //     [
+    //         {
+    //             id: 1,
+    //             title: "O Senhor dos Anéis",
+    //             autor: "J.R.R. Tolkien",
+    //             price: "50.00"
+    //         },
+    //         {
+    //             id: 2,
+    //             title: "Game of Thrones",
+    //             autor: "George R.R. Martin",
+    //             price: "50.00"
+    //         },
+    //         {
+    //             id: 3,
+    //             title: "Millenium",
+    //             autor: "Stieg Larsson",
+    //             price: "50.00"
+    //         },
+    //         {
+    //             id: 4,
+    //             title: "Harry Potter",
+    //             autor: "J.K. Rowling",
+    //             price: "50.00"
+    //         }
+    //     ]
+    // }
+    
     response.status(200);
     response.json(dadosLivros);
 });
