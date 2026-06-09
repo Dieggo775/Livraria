@@ -11,6 +11,10 @@
 * Body-Parser: npm install body-parser --save (configuração para receber os dados do body no POST ou PUT)
 *
 * Fastfy: npm install fastify --save (OPCIONAL)
+*
+***********************************Roteiro para instalar o PRISMA para conectar no Banco de Dados
+* PRISMA '      - npm install prisma --save     (Para realizar a conexão com BD)
+* PrismaClient  - npm install @prisma/cliemt    (Para executar scripts sql no banco de dados)
 */
 
 // Import das bibliotecas
